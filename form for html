@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>simple form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <form action="how.html" class="box" method="POST">
+        <h3> ❤✡❤ wellcome ❤✡❤</h3>
+     <div> Name: <input type="text" name="" placeholder="username"></div> 
+      <div>Password: <input type="password" name="" placeholder="password"></div>
+      <div> Confirm Password:<input type="password" name="" placeholder="Confirm password"></div>
+      
+       <div class="Gender">
+        Gender:<input type="radio" name="gender" value="male">male <input type="radio" name="gender"
+        value="female">Female
+       </div> <br>
+
+
+        <div class="Country" id="country">
+            <label for="country">Select Country</label>
+            <select id="country">
+                <option value="country">United Kingdom</option>
+                <option value="USA">Franch</option>
+                <option value="Nepal">Nepal</option>
+                <option value="UK">UK</option>
+                <option value="Japan">Japan</option>
+                <option value="Austrila">Austrila</option>
+            </select>
+        </div><br>
+
+        Hobby: <input type="checkbox">Cricket <input type="checkbox">Football
+
+       <div class="text">
+Address: <input type="text" >
+       </div>
+
+       <input type="submit" name="" value="Submit">
+    </form>
+
+</body>
+
+</html>
