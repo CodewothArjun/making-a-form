@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <!-- styling the form  -->
+    <style>
+        .error {
+            color: red;
+        }
+
+        body {
+            background-color: chartreuse;
+            text-align: justify;
+            text-emphasis-color: white;
+        }
+
+        .h {
+            text-align: justify;
+            color: blue;
+        }
+        .hi{
+            text-align: center;
+            background-color: rgba(172, 21, 164, 0.212);
+            color: rgb(143, 26, 90);
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <form action="" onsubmit="return formvalidation()">
+        <h2>Login</h2>
+        <div id="container">
+            Name:
+            <input type="text" placeholder="Username" id="username" class="h"><br>
+            <p id="user error" class="error"></p>
+            Password:
+            <input type="password" placeholder="Password" id="Password" class="h"><br>
+            <p id="pass error" class="error"></p>
+            E-mail:
+            <input type="email" name="email" placeholder="Enter a E-mail" class="h"><br><br>
+            Comment:
+            <textarea name="comment" id="" cols="20" rows="2" class="hi" placeholder="comment"></textarea><br><br>
+            Gender:
+            <input type="radio" name="gender">Male
+            <input type="radio" name="gender">Female <br>
+        </div><br>
+
+        <div id="Country">
+            Country:
+            <select id="select">
+                <option value="1" selected>Nepal</option>
+                <option value="2">China</option>
+                <option value="3">Japan</option>
+                <option value="4">USA</option>
+            </select>
+        </div><br>
+
+        <input type="submit" name="submit" id="submit">
+    </form>
+
+    <script>
+        var name = getElementById("username").value;
+        var pass = getElementById("Password").value;
+        let flag = 1;
+
+        function formvalidation() {
+            // validation for username
+            if (username.value == "") {
+                document.getElementById("user error").innerHTML = "Username is Empty.";
+                flag = 0;
+            }
+            else if (username.value.length < 5) {
+                document.getElementById("user error").innerHTML = "Username most be at least 5 characters.";
+                flag = 0;
+
+            }
+            else {
+                document.getElementById("user error").innerHTML = "";
+                flag = 1;
+
+            }
+            // validation of password
+            if (password.value == "") {
+                document.getElementById("pass error").innerHTML = "Password should contain at least 5 characters."
+                flag = 0;
+
+            }
+            else {
+                document.getElementById("pass error").innerHTML = "";
+                flag = 1;
+            }
+
+            if (flag) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
